@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Space Battle Game</h1>
+    <div id="game-status">
+      <p id="player-status">Player Ship Status: Healthy</p>
+      <p id="enemy-status">Enemy Ships Remaining: 6</p>
+    </div>
+
+    <!-- Battlefield with player and enemy ship -->
+    <div class="battlefield">
+      <div class="spaceship" id="player-ship">
+        <img src="https://www.pngkit.com/png/full/29-292440_new-free-sprites-blue-spaceship-.png" alt="Player Ship">
+      </div>
+      <div class="spaceship" id="enemy-ship">
+        <img src="https://www.nicepng.com/png/full/355-3559086_8-bit-spaceship-png.png" alt="Enemy Ship">
+      </div>
+    </div>
+
+    <!-- Control buttons -->
+    <div id="controls">
+      <button id="fire-button" disabled>Fire</button>
+      <button id="retreat-button" disabled>Retreat</button>
+      <button id="start-game">Start Game</button>
+    </div>
+
+    <audio id="shoot-sound" src="Sound effect/shoot02wav-14562.mp3"></audio>
+
+    <div id="game-log"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

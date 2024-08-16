@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#game-status {
+  margin-bottom: 20px;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+#fire-button, #retreat-button, #start-game {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5028b5;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#fire-button:hover, #retreat-button:hover, #start-game:hover {
+  background-color: #4351ac;
+}
+
+#game-log {
+  margin-top: 20px;
+  text-align: left;
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 5px;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+#game-log p {
+  margin: 5px 0;
+}
+
+.battlefield {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;     
+  margin-top: 20px;        
+  height: 400px;            
+  background-image: url('https://64.media.tumblr.com/9bc5ef34937a1afbb0d8de743749fc23/0c74f13326a86af7-dd/s640x960/d740b293817288f05f419d000f2df720387ea940.gif'); /* Your space background */
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.spaceship img {
+  max-width: 100px;
+  position: relative;
+}
+
+.laser {
+  position: absolute;
+  width: 5px;
+  height: 300px;
+  background-image: ('Sound effect/Untitled video - Made with Clipchamp.gif'); /* Make sure you have a laser.gif */
+  background-size: cover;
+  display: none;
+  z-index: 1; /* Ensures the laser is on top */
+}
+
+@keyframes moveAttack {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px); /* Adjust to move ship forward */
+  }
+  100% {
+    transform: translateX(0); /* Return to original position */
+  }
+}
+
+.spaceship img {
+  max-width: 100px;
+  margin: 0 20px;
+  position: relative;
+  z-index: 1;
+  animation: none; /* Ensure no animation by default */
+}
